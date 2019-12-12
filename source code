@@ -1,0 +1,776 @@
+#include<iostream.h>
+#include<conio.h>
+#include<stdio.h>
+#include<string.h>
+#include<stdlib.h>
+#include<ctype.h>
+
+char lq[10][100]={"Who is the author of Jane Eyre?",
+		 "Who became the husband of Elizabeth in the novel Pride and Prejudice?",
+		 "Who is the writer of Tom Sawyer?",
+		 "What is the name of the famous book written by Rabindranath Tagore?",
+		 "Name the writer of 'God of Small Things' who is also an architect.",
+		 "Who is the protagonist of 'War and Peace'?",
+		 "What was Samuel Langhorne Llemen's pen name?",
+		 "Who wrote the poem 'The Road not Taken'?",
+		 "Name Gandhiji's autobiography.",
+		 "To which country does Oscar Wilde belong?"};
+
+char la[10][30]={"charlotte bronte",
+		 "darcy",
+		 "mark twain" ,
+		 "gitanjali",
+		 "arundhati roy",
+		 "napoleon bonaparte",
+		 "mark twain",
+		 "robert frost",
+		 "my expermiments with truth",
+		 "ireland"};
+
+char sq[10][100]={"Brass gets discoloured in air due to the presence of which gas?",
+		 "Which non-metal remains liquid at room temperature?",
+		 "In the periodic table ,elements are arranged according to?",
+		 "Density of water is maximum at which temperature?(enter answer in words)",
+		 "Loudness of sound depends on?",
+		 "Which is the best oxidising halogen?",
+		 "Nitric acid is coloured due to the presence of which gas?",
+		 "Chemical name of washing soda is?",
+		 "Which gas is present under pressure in soft drinks?",
+		 "Anode in dry cell consists of?"};
+
+char sa[10][30]={"hydrogen disulphide",
+		 "bromine",
+		 "atomic number",
+		 "four",
+		 "amplitude",
+		 "fluorine",
+		 "nitrogen dioxide",
+		 "sodium carbonate",
+		 "carbon dioxide",
+		 "zinc"};
+
+char kq[10][100]={"Name the largest house in the world.",
+		 "Padmanabha temple is in?",
+		 "Christ the Redeemer is in which country?",
+		 "The Ottoman empire ruled in which country?" ,
+		 "Name the world's smallest bird.",
+		 "Name India's first woman IPS officer.",
+		 "Stonehenge is situated in which country?",
+		 "Who is the founder of Facebook?",
+		 "Ginger is a _____.",
+		 "Golconda fort was made by?"};
+
+char ka[10][30]={"antilla",
+		 "tamil nadu",
+		 "brazil",
+		 "turkey",
+		 "humming bird",
+		 "kiran bedi",
+		 "england",
+		 "mark zuckerberg",
+		 "herb",
+		 "qutb quli shah"};
+
+
+char mq[10][100]={"Who is the protagonist of 'Jolly LLB2'?",
+		 "Which was the first Indian movie submitted for Oscar?",
+		 "Leonardo Dicaprio got an Oscar for which film?",
+		 "Who was the lead actress in 'Titanic'?",
+		 "Which Welsh actor starred with Jodie Foster in the movie 'Silence of the Lambs'?",
+		 "Which was the first Disney movie?",
+		 "In 'Chak De India',Shahrukh Khan played the role of a ___",
+		 "Which film in 1986 had 11 nominations but won nothing?",
+		 "The genre of film orphan is?",
+		 "In 'Kaabil',who is the lead actress?"};
+
+char ma[10][40]={"akshay kumar",
+		 "mother india",
+		 "the revenant",
+		 "kate winslet",
+		 "hanibal lecter",
+		 "snow white and the seven dwarfs",
+		 "coach",
+		 "the colour purple",
+		 "psychotic thriller",
+		 "yami gautam"};
+
+char gq[10][100]={"Who is the world's best basketball player?",
+		 "The second best golfer in the world is?",
+		 "The football team to win maximum world cups is?",
+		 "Neymar is the player of which club?",
+		 "Who is the present captain of Indian cricket team?",
+		 "Volleyball was started by?",
+		 "What is Mohammed Ali's real name?",
+		 "Which sport did Ravi Shastri play?",
+		 "Name the Indian woman who won an Asian Games gold in 400m run.",
+		 "How many medals did India win in the Brazil Olympics 2016? (enter answer in words)"};
+
+char ga[10][30]={"michael jordan",
+		 "greg norman",
+		 "brazil",
+		 "barcelona",
+		 "virat kohli",
+		 "william g morgan",
+		 "cassius clay",
+		 "cricket",
+		 "pt usha",
+		 "two"};
+
+char cq[10][100]={"What is the capital of Afghanistan?",
+		  "What is the capital of Australia?",
+		  "What is the capital of Belgium?",
+		  "What is the capital of Russia?",
+		  "What is the capital of Germany?",
+		  "What is the capital of Japan?",
+		  "What is the capital of France?",
+		  "What is the capital of Bhutan?",
+		  "What is the capital of Nepal?",
+		  "What is the capital of Brazil?"};
+
+char ca[10][30]={"kabul",
+		 "canberra",
+		 "brussels",
+		 "moscow",
+		 "berlin",
+		 "tokyo",
+		 "paris",
+		 "thimpu",
+		 "kathmandu",
+		 "brasilia"};
+
+char hq[10][100]={"Who was the last viceroy of India?",
+		 "Robert Clive defeated which Bengal ruler?",
+		 "The first woman ruler in India was____.",
+		 "The first civilisation in the world was in?",
+		 "Who was the discoverer  of Tutankhamun's tomb?",
+		 "Sher Shah Suri defeated which Mughal emperor?",
+		 "Which ruler practiced guerilla warfare?",
+		 "Before coming to India ,Gandhiji had practiced law in which country?",
+		 "Who is called the frontier Gandhi?",
+		 "Who was the first prime minister of Pakistan?(enter only last name of person)"};
+
+char ha[10][30]={"lord mountbatten",
+		 "sirajuddaulah",
+		 "razia sultan",
+		 "mesopotamia",
+		 "howard carter",
+		 "humayun",
+		 "shivaji",
+		 "south africa",
+		 "sardar vallabh bhai patel",
+		 "jinnah"};
+
+char aq[10][100]={"which is the heaviest planet?",
+		 "Which planet has no moons?",
+		 "Which is the closest galaxy to the milky way?",
+		 "The brightest star in the sky is?",
+		 "Who was the first man to enter space?",
+		 "Name the first woman cosmonaut in the world",
+		 "Which was the first country to send a man on moon?",
+		 "India's first artificial satellite was?",
+		 "Which planet has largest number of moons?",
+		 "Name the first woman of Indian origin in space."};
+
+char aa[10][30]={"jupiter",
+		 "venus",
+		 "andromeda",
+		 "sirius",
+		 "yuri gagarin",
+		 "valentina tereshkova",
+		 "usa",
+		 "aryabhata",
+		 "jupiter",
+		 "kalpana chawla"};
+
+
+char grid[11][12]={"111 222 333",    // grid creation
+		   "111 222 333",
+		   "111 222 333",
+		   "           ",
+		   "444 555 666",
+		   "444 555 666",
+		   "444 555 666",
+		   "           ",
+		   "777 888 999",
+		   "777 888 999",
+		   "777 888 999"};
+
+char topics[8][30]={"literature",          //list of topics
+		    "science",
+		    "general knowledge",
+		    "movies",
+		    "sports",
+		    "countries and their capitals",
+		    "history",
+		    "space"};
+
+struct select {int topic[8];}player[2];  //make topic counters for each player
+int area;    //the area which player wants to occupy
+char choice[18];      //topic which player has chosen
+struct selection{int counter[10];}theme[8]; //question counter
+int num;              // randomly generated ques no.
+char answer[20];      //player's answer
+
+void main()
+{
+clrscr();
+void griddisplay();  //displays grid
+int validation(char,char);   // validates if game should continue or not
+void seetopics(int);     //to see which topics can be chosen and display them
+void part();           //asks player which area they want to conquer
+void selectques();     //selects ques randomly and displays
+void conquer(char);     //fils player's name in area conquered
+
+
+for (int i=0;i<8;++i)
+player[0].topic[i]=player[1].topic[i]=0;
+
+for (i=0;i<10;++i)
+for(int j=0;j<8;++j)
+theme[i].counter[i]=-1;
+
+char inst;
+cout<<"\n\t\t            * 'QUIZ  CONQUEST' *\n\n";
+
+griddisplay();         //grid display
+cout<<"\n\t\t\t          INSTRUCTIONS\n"<<     // instructions
+      "1. 2 players are required to play the game.\n"<<
+      "2. The aim of the game is to conquer as many parts of the grid as possible.\n"<<
+      "3. There are 2 modes:-\n"
+      "   Mode 1 (short game): Game ends when all parts of the grid are  \n"<<
+      "   conquered by either of the player and no part is empty.\n"<<
+      "   Mode 2 (long game): Game ends when all parts of the grid are  \n"<<
+      "   occupied by one player only.\n\n";
+cout<<"Press 'i' to view more instructions ";
+cin>>inst;
+if (inst=='i')
+{
+ cout<<"\n4. Each player is asked which part of the grid they want to occupy and if they \n "<<
+       "  answer correctly, they successfully occupy the part.\n"<<
+       "5. You can choose from a range of topics from which the question "<<
+       "will be asked.    A topic cannot be chosen again until all others "<<
+       "have been opted once.\n"<<
+       "6. A particular part can be occupied even if it is already occupied by the \n"<<
+       "   opponent.\n\n"
+       "7. Enter all answers and topics in lower case.\n"<<
+       "8. If question is not generated immediately, please wait for 10 seconds \n"<<
+       "   and do not press any key.\n"
+       "9. You can exit the game any moment by typing 'exit' when you are asked \n"<<
+       "   to enter a topic.\n"
+       "10.Do not enter digits or special characters in answers.\n"
+       "11.Do not leave spaces before or after writing your answers.\n"
+       "BEST OF LUCK!!\n\n\n";
+}
+
+char userone[15],usertwo[15];       // enter usernames
+char user1,user2;
+int mode,repeat=1;
+while(repeat==1)
+{
+ repeat=0;
+ cout<<"Enter name of player 1 ";
+ gets(userone);
+ cout<<"Enter name of player 2 ";
+ gets(usertwo);
+ user1= userone[0];
+ user2= usertwo[0];
+ cout<<endl;
+
+ if (tolower(user1)==tolower(user2))
+ {
+  repeat=1;
+  cout<<"Name of players cannot begin with the same letter. Please enter again\n";
+ }
+}
+cout<<"Enter 1 to play short mode and 2 to play long mode ";
+cin>>mode;
+cout<<endl;
+
+int resume=1;
+while (resume==1)
+{
+ for (int x=0;x<2;++x)
+ {
+ if (resume==0)        //in case game ends when player 1 wins
+ continue;
+
+ cout<<"\nPLAYER "<<x+1<<endl;
+ part();
+ seetopics(x);
+ selectques();
+
+ cout<<"\nEnter answer ";
+ gets(answer);               //accepts answer from player
+
+
+ int genre;
+ for (int i=0;i<8;++i)                  //checks which topic is selected
+ {
+  if (strcmp(choice,topics[i])==0)
+  {
+   genre=i;
+   break;
+  }
+ }
+
+ char send;        //for sending user's name to function for conquering area
+ switch(genre)
+ {
+ case 0:if (strcmp(answer,la[num])==0)
+	{
+	 cout<<"Correct answer!\nArea conquered!";
+	 if (x==0)
+	 send=user1;
+	 else
+	 send=user2;
+	 conquer(send);
+	}
+	else
+	{
+	 cout<<"Sorry, wrong answer";
+	 cout<<"\nThe correct answer is: ";
+	 puts(la[num]);
+	}
+	break;
+
+ case 1:if (strcmp(answer,sa[num])==0)
+	{
+	 cout<<"Correct answer!\nArea conquered!";
+	 if (x==0)
+	 send=user1;
+	 else
+	 send=user2;
+	 conquer(send);
+	}
+	else
+	{
+	 cout<<"Sorry, wrong answer";
+	 cout<<"\nThe correct answer is: ";
+	 puts(sa[num]);
+	}
+	break;
+
+ case 2:if (strcmp(answer,ka[num])==0)
+	{
+	 cout<<"Correct answer!\nArea conquered!";
+	 if (x==0)
+	 send=user1;
+	 else
+	 send=user2;
+	 conquer(send);
+	}
+	else
+	{
+	 cout<<"Sorry, wrong answer";
+	 cout<<"\nThe correct answer is: ";
+	 puts(ka[num]);
+	}
+	break;
+
+ case 3:if (strcmp(answer,ma[num])==0)
+	{
+	 cout<<"Correct answer!\nArea conquered!";
+	 if (x==0)
+	 send=user1;
+	 else
+	 send=user2;
+	 conquer(send);
+	}
+	else
+	{
+	 cout<<"Sorry, wrong answer";
+	 cout<<"\nThe correct answer is: ";
+	 puts(ma[num]);
+	}
+	break;
+
+ case 4:if (strcmp(answer,ga[num])==0)
+	{
+	 cout<<"Correct answer!\nArea conquered!";
+	 if (x==0)
+	 send=user1;
+	 else
+	 send=user2;
+	 conquer(send);
+	}
+	else
+	{
+	 cout<<"Sorry, wrong answer";
+	 cout<<"\nThe correct answer is: ";
+	 puts(ga[num]);
+	}
+	break;
+
+ case 5:if (strcmp(answer,ca[num])==0)
+	{
+	 cout<<"Correct answer!\nArea conquered!";
+	 if (x==0)
+	 send=user1;
+	 else
+	 send=user2;
+	 conquer(send);
+	}
+	else
+	{
+	 cout<<"Sorry, wrong answer";
+	 cout<<"\nThe correct answer is: ";
+	 puts(ca[num]);
+	}
+	break;
+
+ case 6:if (strcmp(answer,ha[num])==0)
+	{
+	 cout<<"Correct answer!\nArea conquered!";
+	 if (x==0)
+	 send=user1;
+	 else
+	 send=user2;
+	 conquer(send);
+	}
+	else
+	{
+	 cout<<"Sorry, wrong answer";
+	 cout<<"\nThe correct answer is: ";
+	 puts(ha[num]);
+	}
+	break;
+
+ case 7:if (strcmp(answer,aa[num])==0)
+	{
+	 cout<<"Correct answer!\nArea conquered!";
+	 if (x==0)
+	 send=user1;
+	 else
+	 send=user2;
+	 conquer(send);
+	}
+	else
+	{
+	 cout<<"Sorry, wrong answer";
+	 cout<<"\nThe correct answer is: ";
+	 puts(aa[num]);
+	}
+	break;
+}      //switch case
+
+
+if (mode==2)
+{
+ resume=validation(user1,user2);
+}
+else
+{
+ int check=0;                      //checks if game has ended or not
+ for (i=0;i<11;++i)
+ for (j=0;j<11;++j)
+ {
+  if (isalpha(grid[i][j])!=0)
+  check++;
+ }
+ if (check==81)
+ resume=0;
+}       // else loop
+}      // player deciding loop(runs twice)
+}     //resume loop
+griddisplay();
+
+
+int one=0,two=0;        //to display name of winner
+char max[15];
+for (i=0;usertwo[i]!='\0';++i)
+max[i]=toupper(usertwo[i]);
+max[i]='\0';
+
+for (i=0;i<11;++i)
+{
+ for (j=0;j<11;++j)
+ {
+  if (grid[i][j]==toupper(user1))
+  one++;
+  else if (grid[i][j]==toupper(user2))
+  two++;
+ }
+}
+
+if(one>two)
+{
+ for (int i=0;userone[i]!='\0';++i)
+ max[i]=toupper(userone[i]);
+ max[i]='\0';
+}
+cout<<"\n\n\t\t\t      CONGRATULATIONS!!!\n\t\t\t             ";
+puts(max);
+cout<<"\t\t\t        IS THE WINNER!";
+
+
+//resume=validation(user1,user2);   //validation for game to continue or not
+//}
+
+
+
+getch();
+}
+
+
+
+
+
+//FUNCTION DEFINITIONS
+
+
+void griddisplay()     // grid display
+{
+ for (int i=0;i<11;++i)
+ {
+ cout<<"\t"<<"\t"<<"\t"<<"\t";
+ for(int j=0;j<11;++j)
+  cout<<grid[i][j];
+ cout<<endl;
+ }
+ return;
+}
+
+
+
+
+void part()
+{
+cout<<endl;
+griddisplay();
+int count=1;
+while (count==1)
+{
+ count=0;
+ cout<<"\nWhich area of the grid do you want to conquer?(eg. 1 or 4 or 8) ";
+ cin>>area;
+ if ((area<1)|| (area>9))
+ {
+  cout<<"Invalid choice. Please enter between 1 and 9\n";
+  count=1;
+ }
+}
+return;
+}
+
+
+
+void seetopics(int X)   //to see which topics can be chosen and display them
+{
+int error=0,run=1;
+char exit[5]={"exit"};
+
+while (run==1)
+{
+ run=0,error=0;
+ cout<<"\nWhich topic do you want to select out of:-\n";
+ for (int i=0;i<8;++i)              // checks which topics are available
+ {
+  if (player[X].topic[i]==0)      // only topics with 0 value can be opted
+  {
+   for (int I=i,J=0;topics[I][J]!='\0';++J)
+   cout<<topics[I][J];
+   cout<<endl;
+  }
+ }
+ cout<<"Enter topic ";
+ gets(choice);
+
+ if (strcmp(choice,exit)==0)
+ {
+  cout<<"Game terminated";
+  abort();
+ }
+
+ for (i=0;i<8;++i)
+ {
+  if (strcmp(choice,topics[i])==0)       //updates status of topics
+  {
+   player[X].topic[i]=1;                //the topic chosen,now has value 1
+   break;
+  }
+ }
+
+ for (i=0;i<8;++i)                      //checks if choice is valid or not
+ {
+  if (strcmp(choice,topics[i])!=0)
+  error++;
+ }
+ if (error==8)
+ {
+  cout<<"\nInvalid topic.Please enter again.\n\n";
+  run=1;
+ }       // if loop
+}        //while loop
+
+
+int a=0;           // checks if all topics have been chosen once or not
+for (int i=0;i<8;++i)
+{
+ if (player[X].topic[i]==1)
+ a++;
+}
+if (a==8)     //if all topics have been chosen,
+{                     //assigns 0 in all topic counters again
+ for(i=0;i<8;++i)
+ player[X].topic[i]=0;
+}
+return;
+}
+
+
+void selectques()
+{
+int genre,pointer=0,repeat=1;
+
+for (int i=0;i<8;++i)                  //checks which topic is selected
+{
+ if (strcmp(choice,topics[i])==0)
+ {
+  genre=i;
+  break;
+ }
+}
+
+for (i=0;i<10;++i)           //checks for what no. of time topic is selected
+{
+ if(theme[genre].counter[i]!=-1)
+ pointer++;
+}
+
+while (repeat==1)
+{
+ repeat=0;
+ randomize();
+ num=random(10);                    //generates ques no
+
+ for (i=0;i<pointer;++i)
+ {
+  if (num==theme[genre].counter[i]) //if generated ques no. matches with
+  repeat=1;                   //previous ques nos ie ques has been asked,then
+ }                             //generates ques no again
+ theme[genre].counter[pointer]=num;   //fills the ques no. in the array
+}
+
+
+switch(genre)          //display ques of that no. from selected topic
+{
+ case 0:cout<<endl;
+	puts(lq[num]);
+	break;
+
+ case 1:cout<<endl;
+	puts(sq[num]);
+	break;
+
+ case 2:cout<<endl;
+	puts(kq[num]);
+	break;
+
+ case 3:cout<<endl;
+	puts(mq[num]);
+	break;
+
+ case 4:cout<<endl;
+	puts(gq[num]);
+	break;
+
+ case 5:cout<<endl;
+	puts(cq[num]);
+	break;
+
+ case 6:cout<<endl;
+	puts(hq[num]);
+	break;
+
+ case 7:cout<<endl;
+	puts(aq[num]);
+	break;
+}
+
+int check=0;         //checks if all ques from a topic have been asked or not
+for (i=0;i<10;++i)
+{
+ if(theme[genre].counter[i]!=-1)
+ check++;
+}
+
+if (check==10)   //if all ques have been asked, assigns -1, so that they
+{                             // can be asked again
+ for (i=0;i<10;++i)
+ theme[genre].counter[i]=-1;
+}
+
+return;
+}
+
+
+void conquer(char fill)//fills name of player in the area they want to conquer
+{
+int row();
+int column();
+int i= row();
+int j= column();
+for (int I=i;I<(i+3);++I)
+{
+ for (int J=j;J<(j+3);++J)
+ grid[I][J]=toupper(fill);
+}
+
+cout<<endl;
+return;
+}
+
+int row()            //assigns row of area to be conquered
+{
+int send;
+if ((area==1)||(area==2)||(area==3))
+send=0;
+else if ((area==4)||(area==5)||(area==6))
+send=4;
+else if ((area==7)||(area==8)||(area==9))
+send=8;
+return send;
+}
+
+int column()         //assigns column of area to be conquered
+{
+int send;
+if ((area==1)||(area==4)||(area==7))
+send=0;
+else if ((area==2)||(area==5)||(area==8))
+send=4;
+else if ((area==3)||(area==6)||(area==9))
+send=8;
+return send;
+}
+
+
+
+int validation(char User1,char User2)         //validation
+{
+int flag=0,Resume;
+for (int i=0;i<11;++i)
+for (int j=0;j<11;++j)
+{
+ if ((grid[i][j]==toupper(User1)) || (grid[i][j]==' '))
+ flag++;
+}
+
+if (flag !=121)
+{
+ flag=0;
+ for (i=0;i<11;++i)
+ for (j=0;j<11;++j)
+ {
+  if ((grid[i][j]==toupper(User2)) || (grid[i][j]==' '))
+  flag++;
+ }
+}
+
+
+if (flag==121)
+Resume=0;
+else
+Resume=1;
+return Resume;
+}
